@@ -54,30 +54,37 @@
 
 打卡系统需要`eai-sess`和`UUKey`两个cookie。
 
-可以[使用抓包软件获取](#抓包软件获取cookies)，或[从浏览器中获取](从浏览器获取cookies)。
+可以使用抓包软件获取，或手动从浏览器中获取。
 
-#### 抓包软件获取cookies
+<details>
+    <summary>抓包软件获取cookies</summary>
+    <ol>
+        <li>安装抓包软件：我使用的是<a href='https://www.telerik.com/fiddler'>fiddler classic</a>，安装与使用教程请自行上网搜索，注意需要安装证书才能抓取https报文。</li>
+        <li>
+            <ul>
+                <li>电脑端：用浏览器打开https://app.ucas.ac.cn/uc/wap/login，抓取登录时的POST报文，既可获得两个cookie。如图：
+                    <br>
+                    <img alt='eai-sess' src='./README.assets/cookies_pc1.jpg'>
+                    <br>
+                    <img alt='UUKey' src='./README.assets/cookies_pc2.jpg'>
+                </li>
+                <li>手机端：参考<a href='https://www.cnblogs.com/mmz-tester/p/11125007.html'>这篇博客</a>配置好PC端和手机端后，在手机上点开国科大企业微信——A疫情防控，然后随便找一个域名是<code>app.ucas.ac.cn</code>的报文，就能看到所需的cookie了。如图：
+                    <br>
+                    <img alt='cookies_phone' src='./README.assets/cookies_phone.jpg'>
+                </li>
+            </ul>
+        </li>
+    </ol>
+</details>
 
-1. 安装抓包软件：我使用的是[fiddler classic](https://www.telerik.com/fiddler)，安装与使用教程请自行上网搜索，注意需要安装证书才能抓取https报文。（如果觉得麻烦可以直接跳到[手动获取cookies](#手动获取cookies)）
-
-2. - 电脑端：用浏览器打开https://app.ucas.ac.cn/uc/wap/login，抓取登录时的POST报文，既可获得两个cookie。如图：
-
-   ![eai-sess](./README.assets/cookies_pc1.jpg)
-
-   ![UUKey](./README.assets/cookies_pc2.jpg)
-
-   - 手机端：参考[这篇博客](https://www.cnblogs.com/mmz-tester/p/11125007.html)配置好PC端和手机端后，在手机上点开国科大企业微信——A疫情防控，然后随便找一个域名是`app.ucas.ac.cn`的报文，就能看到所需的cookie了。如图：
-
-     ![cookies_phone](./README.assets/cookies_phone.jpg)
-
-
-#### 从浏览器获取cookies
-使用浏览器打开https://app.ucas.ac.cn/uc/wap/login，登录后在开发者工具里找到cookie。
-
-以Chrome为例，按下F12后，Application——左侧找到Cookies下拉菜单——选择ucas的域名。如图：
-
-![cookies_browser](./README.assets/cookies_browser.jpg)
-
+<details>
+    <summary>从浏览器中获取cookies</summary>
+    <p>使用浏览器打开<a href='https://app.ucas.ac.cn/uc/wap/login'>https://app.ucas.ac.cn/uc/wap/login</a>，登录后在开发者工具里找到cookie。</p>
+    <p>以Chrome为例，按下F12后，Application——左侧找到Cookies下拉菜单——选择ucas的域名。如图：
+        <br>
+        <img alt='cookies_browser' src='./README.assets/cookies_browser.jpg'>
+    </p>
+</details>
 
 ## 实现自动化
 ### Windows
