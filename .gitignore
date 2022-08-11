@@ -4,3 +4,4 @@
 /dist
 *.spec
 pack.txt
+__pycache__
