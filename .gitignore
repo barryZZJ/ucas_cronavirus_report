@@ -1,2 +1,6 @@
 /.idea
 *.ini
+/build
+/dist
+*.spec
+pack.txt
