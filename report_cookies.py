@@ -7,7 +7,7 @@ from utils.user import UserManager
 print('***********************************************')
 print('***                                         ***')
 print('***      UCAS Cronavirus Report Script      ***')
-print('***            Cookies Login                ***')
+print('***         Cookies Login - by ZZJ          ***')
 print('***                                         ***')
 print('***********************************************')
 
