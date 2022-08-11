@@ -62,13 +62,13 @@
         <li>安装抓包软件：我使用的是<a href='https://www.telerik.com/fiddler'>fiddler classic</a>，安装与使用教程请自行上网搜索，注意需要安装证书才能抓取https报文。</li>
         <li>
             <ul>
-                <li>电脑端：用浏览器打开https://app.ucas.ac.cn/uc/wap/login，抓取登录时的POST报文，既可获得两个cookie。如图：
+                <li>抓PC端的包：用浏览器打开https://app.ucas.ac.cn/uc/wap/login，抓取登录时的POST报文，既可获得两个cookie。如图：
                     <br>
                     <img alt='eai-sess' src='./README.assets/cookies_pc1.jpg'>
                     <br>
                     <img alt='UUKey' src='./README.assets/cookies_pc2.jpg'>
                 </li>
-                <li>手机端：参考<a href='https://www.cnblogs.com/mmz-tester/p/11125007.html'>这篇博客</a>配置好PC端和手机端后，在手机上点开国科大企业微信——A疫情防控，然后随便找一个域名是<code>app.ucas.ac.cn</code>的报文，就能看到所需的cookie了。如图：
+                <li>抓手机端的包：参考<a href='https://www.cnblogs.com/mmz-tester/p/11125007.html'>这篇博客</a>分别配置好PC端和手机端后，在手机上点开国科大企业微信——A疫情防控，然后随便找一个域名是<code>app.ucas.ac.cn</code>的报文，就能看到所需的cookie了。如图：
                     <br>
                     <img alt='cookies_phone' src='./README.assets/cookies_phone.jpg'>
                 </li>
