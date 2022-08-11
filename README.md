@@ -86,6 +86,6 @@
 ### Linux
 使用`crontab`。可参考[Linux crontab 命令](https://www.runoob.com/linux/linux-comm-crontab.html)。
 
-示例：每天早上8点运行指令：
+示例：每天早上8点运行脚本：
 
 `0 8 * * * python3 report.py`
