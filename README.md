@@ -54,6 +54,8 @@
 
 打卡系统需要`eai-sess`和`UUKey`两个cookie。
 
+可以[使用抓包软件获取](#抓包软件获取cookies)，或[从浏览器中获取](从浏览器获取cookies)。
+
 #### 抓包软件获取cookies
 
 1. 安装抓包软件：我使用的是[fiddler classic](https://www.telerik.com/fiddler)，安装与使用教程请自行上网搜索，注意需要安装证书才能抓取https报文。（如果觉得麻烦可以直接跳到[手动获取cookies](#手动获取cookies)）
@@ -69,7 +71,7 @@
      ![cookies_phone](./README.assets/cookies_phone.jpg)
 
 
-#### 手动获取cookies
+#### 从浏览器获取cookies
 使用浏览器打开https://app.ucas.ac.cn/uc/wap/login，登录后在开发者工具里找到cookie。
 
 以Chrome为例，按下F12后，Application——左侧找到Cookies下拉菜单——选择ucas的域名。如图：
