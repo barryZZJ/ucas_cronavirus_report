@@ -89,6 +89,8 @@
 </details>
 
 ## 实现自动化
+如果要挂服务器的话，可以自行魔改，记得把入口里的`os.system('pause')`删掉。
+
 ### Windows
 任务计划程序。可参考[Windows创建定时任务执行Python脚本](https://blog.csdn.net/u012849872/article/details/82719372)。
 
