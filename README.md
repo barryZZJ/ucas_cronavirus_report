@@ -29,44 +29,36 @@
 
 ## 脚本入口说明
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-</style>
 <table class="tg">
 <thead>
   <tr>
-    <th class="tg-0pky">数据构造方式</th>
-    <th class="tg-0pky">登陆方式</th>
-    <th class="tg-0pky">脚本名</th>
-    <th class="tg-0pky">备注</th>
+    <th>数据构造方式</th>
+    <th>登陆方式</th>
+    <th>脚本名</th>
+    <th>备注</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-0pky" rowspan="2">自动复制昨日报告</td>
-    <td class="tg-0pky">使用账号密码登录</td>
-    <td class="tg-0pky"><code>report.py</code></td>
-    <td class="tg-0pky"></td>
+    <td rowspan="2">自动复制昨日报告</td>
+    <td>使用账号密码登录</td>
+    <td><code>report.py</code></td>
+    <td></td>
   </tr>
   <tr>
-    <td class="tg-0pky">使用cookies登录</td>
-    <td class="tg-0pky"><code>report_cookies.py</code></td>
-    <td class="tg-0pky"></td>
+    <td>使用cookies登录</td>
+    <td><code>report_cookies.py</code></td>
+    <td></td>
   </tr>
   <tr>
-    <td class="tg-0pky" rowspan="2">可手动修改参数</td>
-    <td class="tg-0pky">使用账号密码登录</td>
-    <td class="tg-0pky"><code>report(manual).py</code></td>
-    <td class="tg-0pky" rowspan="2">目前只支持修改“昨日是否接受核酸检测”，其他参数修改请手动填报。</td>
+    <td rowspan="2">可手动修改参数</td>
+    <td>使用账号密码登录</td>
+    <td><code>report(manual).py</code></td>
+    <td rowspan="2">目前只支持修改“昨日是否接受核酸检测”，其他参数修改请手动填报。</td>
   </tr>
   <tr>
-    <td class="tg-0pky">使用cookies登录</td>
-    <td class="tg-0pky"><code>report(manual)_cookies.py</code></td>
+    <td>使用cookies登录</td>
+    <td><code>report(manual)_cookies.py</code></td>
   </tr>
 </tbody>
 </table>
