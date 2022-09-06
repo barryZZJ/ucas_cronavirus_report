@@ -27,7 +27,8 @@ class User_cookie(User):
 
 
 class UserManager:
-    CONFPATH = ['user.ini', 'user_cookies.ini']
+    BASEPATH = os.path.dirname(os.path.dirname(__file__))
+    CONFPATH = [os.path.join(BASEPATH, 'user.ini'), os.path.join(BASEPATH, 'user_cookies.ini')]
     def __init__(self, use_cookies):
         self.use_cookies = use_cookies
         self.config = {}
@@ -36,9 +37,9 @@ class UserManager:
 
     def check_new_user(self):
         if not os.path.exists(self.CONFPATH[self.use_cookies]) or os.path.getsize(self.CONFPATH[self.use_cookies]) == 0:
-            print('未检测到.ini配置文件，请输入', end='')
+            print('未检测到配置文件'+self.CONFPATH[self.use_cookies]+'，请输入', end='')
             if self.use_cookies:
-                print('cookies\n（默认记住此配置，如需更新请删除或修改当前目录下的.ini文件）\n')
+                print('cookies\n（默认记住此配置，如需更新请删除或修改.ini文件）\n')
                 eai_sess = input('eai-sess: ')
                 UUKey = input('UUKey: ')
                 self.config = {
@@ -46,7 +47,7 @@ class UserManager:
                     'UUKey': UUKey
                 }
             else:
-                print('sep系统登录账号和密码\n（默认记住此配置，如需更新请删除或修改当前目录下的.ini文件）\n')
+                print('sep系统登录账号和密码\n（默认记住此配置，如需更新请删除或修改.ini文件）\n')
                 print('说明：sep用户名一般为学校邮箱**@ucas.ac.cn。\n')
                 username = input('sep账号：')
                 password = input('sep密码：')
