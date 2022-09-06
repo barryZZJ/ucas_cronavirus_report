@@ -1,5 +1,7 @@
 import os
 import configparser
+import sys
+
 
 class User:
     def __init__(self, use_cookies):
@@ -27,7 +29,7 @@ class User_cookie(User):
 
 
 class UserManager:
-    BASEPATH = os.path.dirname(os.path.dirname(__file__))
+    BASEPATH = os.path.dirname(os.path.dirname(sys.executable if hasattr(sys, 'frozen') else __file__))  # 打包成exe文件后__file__失效
     CONFPATH = [os.path.join(BASEPATH, 'user.ini'), os.path.join(BASEPATH, 'user_cookies.ini')]
     def __init__(self, use_cookies):
         self.use_cookies = use_cookies

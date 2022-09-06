@@ -5,3 +5,4 @@
 *.spec
 pack.txt
 __pycache__
+*.bat
